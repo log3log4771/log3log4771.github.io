@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/templatemo-style.css">
+<script type="text/javascript" src="js/jquery.snow.js"></script>
+<script type="text/javascript">
+  $(function(){
+    // 產生下雪效果
+    // 每隔 100 毫秒(0.1 秒)產生一個介於 5~50px 且顏色為 #0099FF 的雪片
+    $.fn.snow({
+      minSize: 5,
+      maxSize: 30,
+      newOn: 200,
+      flakeColor: '#ffffff'
+    });
+  });
+</script>
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+  .carousel-inner{
+    width:100%;
+    max-height:300px;
+  }
+
+  #logo{
+    width:84px;
+    float:right;
+  }
+  footer{
+      background-color: #e6e6e6;
+      color: #000;
+      padding: 30px;
+}
+  </style>
+</head>
+<body>
+  <div class='container-fluid'>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+
+      <div class="jumbotron">
+      <h1>三角冰<img id='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Penrose-dreieck.svg/2000px-Penrose-dreieck.svg.png" alt="">
+      </h1>
+      <h2 style="position:absolute; left:20%;">冰品專賣店</h2>
+      </div>
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Menu 菜單</a></li>
+            <li class="active"><a href="#">About us 關於我們</a></li>
+            <li><a href="index2.html">Store 店鋪資訊</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row">
+        <div class="col-sm-12">
+        <img style="width:100%; " src="http://www.ikea.com/ie/en/images/rooms/ikea-a-traditional-kitchen-for-the-modern-life__1364299529841-s4.jpg" alt="">
+        </div>
+        <div class="col-sm-12">
+          <br>
+          <hr>
+          <h2>我們的堅持</h2>
+          <hr>
+          <br>
+        </div>
+        <div class="col-sm-8">
+          <p style=" margin-top:70px; padding-bottom:70px;">十九年前，一次意外的發明，超級芒果冰就這樣誕生了。看著客人吃芒果冰時的幸福感，臉上露出的笑容，我們暗自告訴自己“那就是我們要的！”十九年後的今天，我們搬了新店面，換了新裝潢，有了新餐點，但唯一不變的是原先的堅持和理念。不斷的發明新甜品，想帶給客人一次又一次的驚喜；堅持用最好，最天然的食材，想讓客人吃甜點也可以吃得很健康。無論你是老客戶，新朋友，我們都歡迎您來店裡坐坐，嚐嚐這簡單的快樂。</p>
+        </div>
+        <div class="col-sm-4">
+          <img style="width:100%;" src="http://pre00.deviantart.net/3daa/th/pre/f/2013/212/c/9/sweet_typography_by_samadarag-d6ftltv.png" alt="">
+        </div>
+        <div class="col-sm-12">
+          <br>
+          <br>
+        </div>
+        <div class="col-sm-5">
+          <img style="width:100%;" src="http://static.oprah.com/images/o2/201412/201412-Ta-DaDesserts_02-949x534.jpg" alt="">
+        </div>
+        <div class="col-sm-7">
+          <p style=" margin-top:50px; padding-bottom:50px;">十九年前，一次意外的發明，超級芒果冰就這樣誕生了。看著客人吃芒果冰時的幸福感，臉上露出的笑容，我們暗自告訴自己“那就是我們要的！”十九年後的今天，我們搬了新店面，換了新裝潢，有了新餐點，但唯一不變的是原先的堅持和理念。不斷的發明新甜品，想帶給客人一次又一次的驚喜；堅持用最好，最天然的食材，想讓客人吃甜點也可以吃得很健康。無論你是老客戶，新朋友，我們都歡迎您來店裡坐坐，嚐嚐這簡單的快樂。</p>
+        </div>
+
+        <div class="col-sm-12">
+          <br>
+          <hr>
+          <h2>我們的堅持</h2>
+          <hr>
+          <br>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="col-sm-12"><img  style="width:100%;" src="https://cdn0.iconfinder.com/data/icons/ice-cream/512/ice_cream_cup_vanilla.png" alt=""></div>
+          <div class="col-sm-12">
+            <p>十九年前，一次意外的發明，超級芒果冰就這樣誕生了。看著客人吃芒果冰時的幸福感，臉上露出的笑容，我們暗自告訴自己“那就是我們要的！”</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+           <div class="col-sm-12"><img  style="width:100%;" src="https://cdn0.iconfinder.com/data/icons/ice-cream/512/ice_cream_stick_strawberry.png" alt=""></div>
+          <div class="col-sm-12">
+            <p>十九年前，一次意外的發明，超級芒果冰就這樣誕生了。看著客人吃芒果冰時的幸福感，臉上露出的笑容，我們暗自告訴自己“那就是我們要的！”</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+           <div class="col-sm-12"><img  style="width:100%;" src="https://cdn0.iconfinder.com/data/icons/ice-cream/512/ice_cream_cone_vanilla.png" alt=""></div>
+          <div class="col-sm-12">
+            <p>十九年前，一次意外的發明，超級芒果冰就這樣誕生了。看著客人吃芒果冰時的幸福感，臉上露出的笑容，我們暗自告訴自己“那就是我們要的！”</p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+           <div class="col-sm-12"><img  style="width:100%;" src="https://cdn0.iconfinder.com/data/icons/ice-cream/512/ice_cream_cup_chocolate.png" alt=""></div>
+          <div class="col-sm-12">
+            <p>十九年前，一次意外的發明，超級芒果冰就這樣誕生了。看著客人吃芒果冰時的幸福感，臉上露出的笑容，我們暗自告訴自己“那就是我們要的！”</p>
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <br>
+          <br>
+        </div>
+      </div>
+
+
+      <footer class="container-fluid">
+          <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+              <p>TEL 電話 : 02-2932-1367</p>
+              <p>Address 地址 : 羅斯福路五段170巷, 臺北市 116</p>
+              <p>© 2016 by SanJiaoBing. All Rights Reserved​.​</p>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 text-center">
+              <a href="https://www.facebook.com/triangle.ice/">
+                <img style="width:64px;padding:5px" src="http://www.iconsdb.com/icons/preview/black/facebook-5-xxl.png" alt="">
+              </a>
+              <a href="https://www.instagram.com/sanjiaobing/">
+                <img style="width:64px;padding:5px;" src="http://www.agenciadix.com.br/agencia/site/img/menus/12763_out.png" alt="">
+              </a>
+            </div>
+          </div>
+        </footer>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+</body>
+</html>

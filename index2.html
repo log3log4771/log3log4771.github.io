@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="css/templatemo-style.css">
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="js/jquery.snow.js"></script>
+<script type="text/javascript">
+  $(function(){
+    // 產生下雪效果
+    // 每隔 100 毫秒(0.1 秒)產生一個介於 5~50px 且顏色為 #0099FF 的雪片
+    $.fn.snow({
+      minSize: 5,
+      maxSize: 30,
+      newOn: 200,
+      flakeColor: '#ffffff'
+    });
+  });
+</script>
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+  .carousel-inner{
+    width:100%;
+    max-height:300px;
+  }
+
+  #logo{
+    width:84px;
+    float:right;
+  }
+  footer{
+      background-color: #e6e6e6;
+      color: #000;
+      padding: 30px;
+}
+  </style>
+</head>
+<body>
+  <div class='container-fluid'>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+
+      <div class="jumbotron">
+      <h1>三角冰<img id='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Penrose-dreieck.svg/2000px-Penrose-dreieck.svg.png" alt="">
+      </h1>
+      <h2 style="position:absolute; left:20%;">冰品專賣店</h2>
+      </div>
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Menu 菜單</a></li>
+            <li><a href="index1.html">About us 關於我們</a></li>
+            <li class="active"><a href="#">Store 店鋪資訊</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="row">
+        <!-- <div class="col-sm-12">
+          <br>
+          <hr>
+          <h2>地理位置</h2>
+          <hr>
+          <br>
+        </div> -->
+
+        <div class="col-sm-6">
+         <div class="col-sm-12">
+          <br>
+          <br>
+          <br>
+          <h3><img style="width:7%; margin-bottom:-8px;" src="http://www.hybridconstruction.ca/images/sun_snowflake.png" alt="">店家地址:台北市文山區羅斯福路五段170巷</h3>
+          <br>
+          <h3><img style="width:7%; margin-bottom:-8px;" src="http://www.hybridconstruction.ca/images/sun_snowflake.png" alt="">營業時間 : 每日 12:00 - 21:30 </h3>
+          <br>
+          <h3><img style="width:7%; margin-bottom:-8px;" src="http://www.hybridconstruction.ca/images/sun_snowflake.png" alt="">電話號碼 ： 02 - 2932 - 1367</h3>
+          <br>
+          <h3><img style="width:7%; margin-bottom:-8px;" src="http://www.hybridconstruction.ca/images/sun_snowflake.png" alt="">交通資訊 : 可搭乘 捷運 至萬隆四號出口或可搭乘公車至武功國小站下車，下車後徒步三分鐘就會看到我們噢～</h3>
+          <br>
+          <br>
+          <br>
+         </div>
+         <div class="col-sm-12">
+             <div id="googleMap" style="width:100%;height:380px;"></div>
+             <br>
+         </div>
+        </div>
+        <div class="col-sm-6">
+        <img style="width:100%;" src="images/store.jpg" alt="">
+      </div>
+
+     <!--  <div class="col-sm-12">
+        <br>
+        <hr>
+        <h2>人才招募</h2>
+        <hr>
+        <br>
+      </div> -->
+
+      </div>
+
+      <footer class="container-fluid">
+          <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-5">
+              <p>TEL 電話 : 02-2932-1367</p>
+              <p>Address 地址 : 羅斯福路五段170巷, 臺北市 116</p>
+              <p>© 2016 by SanJiaoBing. All Rights Reserved​.​</p>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 text-center">
+              <a href="https://www.facebook.com/triangle.ice/">
+                <img style="width:64px;padding:5px" src="http://www.iconsdb.com/icons/preview/black/facebook-5-xxl.png" alt="">
+              </a>
+              <a href="https://www.instagram.com/sanjiaobing/">
+                <img style="width:64px;padding:5px;" src="http://www.agenciadix.com.br/agencia/site/img/menus/12763_out.png" alt="">
+              </a>
+            </div>
+          </div>
+
+        </footer>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+</body>
+<script>
+var myCenter=new google.maps.LatLng(25.004695, 121.537996);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"Hello World!"
+  });
+
+google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map,marker);
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</html>
